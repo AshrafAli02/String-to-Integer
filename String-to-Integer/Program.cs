@@ -11,7 +11,7 @@ namespace String_to_Integer
         public static List<char> symbol = new List<char> { '+', '-', '*', '/', ' ', '#', '@', '!' };
         static void Main(string[] args)
         {
-            string word = "2147483649";
+            string word = "12.5as-3";
             Console.WriteLine(IntParse(word));
             
         }
@@ -19,17 +19,20 @@ namespace String_to_Integer
         public static int IntParse(string s)
         {
             int number = 0;
+            int number1 = 0;
+            bool dot = false;
             string sign = "";
             for (int i = 0; i < s.Length; i++)
             {
-                if (number != 0 && symbol.Contains(s[i]))
+                if ((number != 0 && symbol.Contains(s[i]))||(s[i]>=65 && s[i]<=90)|| (s[i] >= 97 && s[i] <= 122))
                 {
                     throw new FormatException();
                     
                 }
                 if (number != 0 && s[i]=='.')
                 {
-                    return number;
+                    number1 = number;
+                    dot = true;
                 }
                 if (s[i] == '-'&& number==0)
                 {
@@ -52,6 +55,10 @@ namespace String_to_Integer
             if (sign=="-")
             {
                 return number * (-1);
+            }
+            if(dot==true)
+            {
+                return number1;
             }
             return number;
         }
