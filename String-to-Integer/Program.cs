@@ -12,8 +12,7 @@ namespace String_to_Integer
         static void Main(string[] args)
         {
             string word = "12.5as-3";
-            Console.WriteLine(IntParse(word));
-            
+            Console.WriteLine(IntParse(word));   
         }
 
         public static int IntParse(string s)
@@ -62,45 +61,6 @@ namespace String_to_Integer
             }
             return number;
         }
-        //public static int Digit(char ch)
-        //{
-        //    int value = ch;
-        //    int digit = 0;
-        //    switch(value)
-        //    {
-        //        case 48:
-        //            digit = 0;
-        //            break;
-        //        case 49:
-        //            digit = 1;
-        //            break;
-        //        case 50:
-        //            digit = 2;
-        //            break;
-        //        case 51:
-        //            digit = 3;
-        //            break;
-        //        case 52:
-        //            digit = 4;
-        //            break;
-        //        case 53:
-        //            digit = 5;
-        //            break;
-        //        case 54:
-        //            digit = 6;
-        //            break;
-        //        case 55:
-        //            digit = 7;
-        //            break;
-        //        case 56:
-        //            digit = 8;
-        //            break;
-        //        case 57:
-        //            digit = 9;
-        //            break;
-        //    }
-        //    return digit;
-        //}
        
     }
     
